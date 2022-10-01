@@ -1,19 +1,40 @@
 import React from "react";
-import Navbar from "./components/NavBar";
 import Profile from "./pages/Profile";
 import Login from "./pages/Login";
-import Messages from "./pages/Messages";
 import JobBoard from "./pages/JobBoard";
 import { Routes, Route } from "react-router-dom";
+import Register from "./pages/Register";
+import ProtectedRoute, { ProtectedRouteProps } from "./auth/ProtectedRoute";
 
 function App() {
+  const defaultProtectedRouteProps: Omit<ProtectedRouteProps, "outlet"> = {
+    authenticationPath: "/login",
+  };
+
   return (
     <div>
-      <Navbar />
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/job-board" element={<JobBoard />} />
+        <Route
+          path="/"
+          element={
+            <ProtectedRoute
+              {...defaultProtectedRouteProps}
+              outlet={<JobBoard />}
+            />
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute
+              {...defaultProtectedRouteProps}
+              outlet={<Profile />}
+            />
+          }
+        />
+
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </div>
   );

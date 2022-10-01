@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "companyName": "BlackBerry",
+    "location": "Burnaby",
+    "size": 16,
+    "projectName": "QNX",
+    "projectDescription": "BlackBerry QNX is seeking a talented and motivated individual with software development experience in embedded audio, or automotive signal processing for the full-time role of Principal Acoustics Software Developer. ",
+    "logo": "./src/assets/images/bb.png"
+  },
+  {
+    "id": 2,
+    "companyName": "Tesla",
+    "location": "Richmond",
+    "size": 5,
+    "projectName": "Seasonal Tesla",
+    "projectDescription": "The Seasonal Tesla Advisor is essential support at the end of quarter, operating alongside our Sales & Delivery team to execute record-breaking delivery results. The ideal candidate will have exceptional customer service skills and a passion for sustainable energy.",
+    "logo": "./src/assets/images/tesla-logo.png"
+  },
+  {
+    "id": 3,
+    "companyName": "Adobe Inc.",
+    "location": "Vancouver",
+    "size": 6,
+    "projectName": "Cardify",
+    "projectDescription": "mobile application game...",
+    "logo": "./src/assets/images/adobe-icon.png"
+  }
+]

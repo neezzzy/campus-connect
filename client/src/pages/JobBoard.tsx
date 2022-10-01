@@ -1,14 +1,17 @@
-import * as React from "react";
+import React from "react";
+import CompanyList from "../components/CompanyList";
 import NavBar from "../components/NavBar";
 
-export interface JobBoardProps {}
 
-export default class JobBoard extends React.Component<JobBoardProps> {
-  public render() {
-    return (
-      <div>
-        JobBoard
-      </div>
-    );
-  }
-}
+type Props = {};
+
+const JobBoard = (props: Props) => {
+  return (
+    <>
+      <NavBar />
+      <CompanyList />
+    </>
+  );
+};
+
+export default JobBoard;
